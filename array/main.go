@@ -3,20 +3,20 @@ package main
 import "fmt"
 
 func main() {
-
-	x := [5]float64{
-		87,
-		82,
-		45,
-		34,
-		21,
+	x := []int{
+		48, 96, 86, 68,
+		57, 82, 63, 70,
+		37, 34, 83, 27,
+		19, 97, 9, 17,
 	}
 
-	var total float64 = 0
+	min := x[0]
+
 	for _, value := range x {
-		total += value
+		if value < min {
+			min = value
+		}
 	}
 
-	fmt.Println(total / float64(len(x)))
-
+	fmt.Println(min)
 }
